@@ -4,7 +4,8 @@
   "description": "JS library for ESN DAV import client",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src"
   },
   "files": [
     "src",
@@ -21,6 +22,10 @@
   },
   "author": "",
   "license": "AGPL-3.0",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
   "dependencies": {}
 }
