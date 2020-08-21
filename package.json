@@ -1,0 +1,26 @@
+{
+  "name": "esn-dav-import-client",
+  "version": "0.0.1",
+  "description": "JS library for ESN DAV import client",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "keywords": [
+    "esn",
+    "dav",
+    "import"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenPaaS-Suite/esn-dav-import-client"
+  },
+  "author": "",
+  "license": "AGPL-3.0",
+  "devDependencies": {},
+  "dependencies": {}
+}
