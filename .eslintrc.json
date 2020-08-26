@@ -1,0 +1,14 @@
+{
+  "extends": "linagora-esn",
+  "rules": {
+    "consistent-this": ["warn", "self"],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-process-env": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "import/prefer-default-export": 0
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
