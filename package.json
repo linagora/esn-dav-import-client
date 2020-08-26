@@ -4,8 +4,9 @@
   "description": "JS library for ESN DAV import client",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src"
+    "test": "npm run lint && npm run unit-test",
+    "lint": "eslint src",
+    "unit-test": "jest"
   },
   "files": [
     "src",
@@ -23,9 +24,13 @@
   "author": "",
   "license": "AGPL-3.0",
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
     "eslint": "^7.7.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "jest": "^26.4.2"
   },
   "dependencies": {
     "esn-api-client": "github:openpaas-suite/esn-api-client#main"
