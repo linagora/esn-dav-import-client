@@ -1,4 +1,4 @@
-import { davImportApi, Client } from 'esn-api-client/src';
+import { Client, davImportApi } from 'esn-api-client/src';
 
 export default class ESNDavImportClient {
   /**
@@ -24,6 +24,6 @@ export default class ESNDavImportClient {
 
   importFromFile(file, target) {
     return this.uploadFile(file)
-      .then((fileId) => this.davImportApi.importFromFile(fileId, target));
+      .then(fileId => this.davImportApi.importFromFile(fileId, target));
   }
 }
