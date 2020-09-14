@@ -1,24 +1,23 @@
-import { Client, davImportApi } from 'esn-api-client/src';
+import Client from 'esn-api-client/src/Client';
+import davImportApi from 'esn-api-client/src/api/dav-import';
 
 export default class ESNDavImportClient {
   /**
    * @constructor
-   * @param {Function} uploadFile the function to upload file
-   * @param {String} OPENPAAS_URL the deployed URL for OpenPaaS server
+   * @param {Object} options An options object that contains:
+   * @param {Function} options.esnApiClient the instance of Client to communicate with ESN's Backend APIs
+   * @param {Function} options.uploadFile the function to upload file
    */
-  constructor(uploadFile, OPENPAAS_URL) {
+  constructor({ esnApiClient, uploadFile }) {
+    if (!(esnApiClient instanceof Client)) {
+      throw new Error('esnApiClient is required and must be an instance of Client');
+    }
+
     if (typeof uploadFile !== 'function') {
       throw new Error('uploadFile is required and must be a function');
     }
 
-    if (!OPENPAAS_URL) {
-      throw new Error('OPENPAAS_URL is required');
-    }
-
     this.uploadFile = uploadFile;
-
-    const esnApiClient = new Client({ baseURL: `${OPENPAAS_URL}/linagora.esn.dav.import/api` });
-
     this.davImportApi = davImportApi(esnApiClient);
   }
 
