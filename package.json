@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/OpenPaaS-Suite/esn-dav-import-client"
+    "url": "https://github.com/linagora/esn-dav-import-client"
   },
   "author": "",
   "license": "AGPL-3.0",
@@ -34,6 +34,6 @@
     "jest": "^26.4.2"
   },
   "dependencies": {
-    "esn-api-client": "github:openpaas-suite/esn-api-client#main"
+    "esn-api-client": "github:linagora/esn-api-client#main"
   }
 }
